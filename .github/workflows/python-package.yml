@@ -23,10 +23,10 @@ jobs:
     - name: Set up Service Account Key
       env:
         GCP_SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-      run: echo "$GCP_SERVICE_ACCOUNT_KEY" > service-account.json
+      run: echo "$GCP_SERVICE_ACCOUNT_KEY" > gcp-sa.json
 
     - name: Install requirements
       run: pip install -r requirements.txt
 
     - name: Run Python script
-      run: python my_script.py
+      run: csv-xcel-s3.py
