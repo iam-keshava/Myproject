@@ -29,4 +29,4 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run Python script
-      run: csv-xcel-s3.py
+      run: python csv-xcel-s3.py
