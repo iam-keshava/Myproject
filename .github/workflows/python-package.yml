@@ -1,17 +1,12 @@
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python Script with Service Account
+name: Python Script with Service Account (get disk details and store details file in s3)
 
 on:
   push:
     branches:
-      - test  # Set to the branch you want to trigger the workflow on
-  workflow_dispatch:
-    inputs:
-      custom_parameter:
-        description: 'Custom input parameter'
-        required: false
+    - test # Set to the branch you want to trigger the workflow on
 
 jobs:
   build:
@@ -35,4 +30,5 @@ jobs:
 
     - name: Run Python script
       run: python csv-xcel-s3.py
+
 
