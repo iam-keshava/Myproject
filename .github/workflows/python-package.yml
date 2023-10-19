@@ -7,6 +7,11 @@ on:
   push:
     branches:
       - test  # Set to the branch you want to trigger the workflow on
+  workflow_dispatch:
+    inputs:
+      custom_parameter:
+        description: 'Custom input parameter'
+        required: false
 
 jobs:
   build:
@@ -30,3 +35,4 @@ jobs:
 
     - name: Run Python script
       run: python csv-xcel-s3.py
+
