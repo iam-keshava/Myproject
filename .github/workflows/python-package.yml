@@ -23,7 +23,7 @@ jobs:
     - name: Set up Service Account Key
       env:
         GCP_SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-      #run: echo "$GCP_SERVICE_ACCOUNT_KEY" > gcp-sa.json
+      run: echo "$GCP_SERVICE_ACCOUNT_KEY" > gcp-sa.json
 
     - name: Install requirements
       run: pip install -r requirements.txt
